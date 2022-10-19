@@ -3,8 +3,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 class Counter extends Component {
     state={
-        count: 1 ,
-        tags: ["tag1","tag2","tag3"]
+        count: 1 
+    };
+    handleIncrement = () => {
+       // console.log("Increment Clicked",this);
+       this.setState({count: this.state.count + 1 });
     };
 
     render() { 
@@ -15,8 +18,7 @@ class Counter extends Component {
         return (
             <div> 
             <span className={classes}>{this.formatCount()}</span>
-            <button className="btn btn-secondary btn-sm">Increment</button>
-            <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+            <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
             </div>
             );
     }
