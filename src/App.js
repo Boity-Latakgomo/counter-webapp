@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
-import Counter from './components/counter';
+import Counters from './components/counters';
 
 
 function App() {
-  return <Counter />
+  return <Counters />
 }
 
 export default App;
